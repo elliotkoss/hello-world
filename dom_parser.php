@@ -31,7 +31,10 @@ libxml_use_internal_errors($internalErrors);
 
 foreach($doc->getElementsByTagName('a') as $link) {
         # Show the <a href>
+		echo $link->textContent;
+		echo $link->nodeValue;
         echo $link->getAttribute('href');
+        echo $link->getAttribute('class');
         echo PHP_EOL;
 }
 
